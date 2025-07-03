@@ -59,12 +59,15 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1, duration: 0.8 }}
           >
+            <a href="https://www.youtube.com/@YUGANKMAHALE" target="_blank" rel="noopener noreferrer">
             <Button
               size="lg"
               className="bg-blue-600 hover:bg-blue-700 text-white px-12 py-4 text-lg font-futura font-bold tracking-wider transition-all duration-300 hover:scale-105"
             >
               VIEW MY FILMS
             </Button>
+            </a>
+            <a href="/images/CV_yugank.pdf" download>
             <Button
               variant="outline"
               size="lg"
@@ -73,6 +76,7 @@ export default function Hero() {
               <Download className="mr-3 h-5 w-5" />
               DOWNLOAD CV
             </Button>
+            </a>
           </motion.div>
 
           <motion.div

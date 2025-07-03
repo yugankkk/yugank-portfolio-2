@@ -60,8 +60,8 @@ export default function Contact() {
     {
       icon: MapPin,
       label: "LOCATION",
-      value: "MUMBAI, MAHARASHTRA, INDIA",
-      href: "#",
+      value: "VIRAR, MAHARASHTRA, INDIA",
+      href: "https://maps.app.goo.gl/ZSRVxsY4oqkGNZQeA",
     },
   ]
 
@@ -86,7 +86,7 @@ export default function Contact() {
           </h2>
           <div className="w-24 h-1 bg-blue-400 mx-auto mb-16" />
           <p className="text-2xl text-gray-400 max-w-4xl mx-auto font-marigold">
-            Ready to bring your ideas to life? Let's collaborate on your next engineering project or film production.
+            Always Ready and Enthusiastic for work , contact me and let's create something extraordinary together!
           </p>
         </motion.div>
 
@@ -104,7 +104,7 @@ export default function Contact() {
                   <h3 className="text-3xl font-futura font-bold mb-6 text-white tracking-wider">SEND MESSAGE</h3>
                   <p className="text-gray-400 font-marigold text-lg leading-relaxed">
                     Have a project in mind? I'd love to hear about it. Send me a message and let's discuss how we can
-                    work together.
+                    work together. - yugank 
                   </p>
                 </div>
 
@@ -272,17 +272,17 @@ export default function Contact() {
                 </div>
                 <p className="text-gray-300 mb-6 font-marigold text-lg leading-relaxed">
                   I'm currently available for freelance projects and collaborations. Let's create something
-                  extraordinary together!
+                  extraordinary together! - yugank
                 </p>
                 <div className="flex flex-wrap gap-3">
                   <span className="px-4 py-2 bg-green-600/20 text-green-400 text-sm font-futura font-bold tracking-wider border border-green-600/30">
                     ENGINEERING PROJECTS
                   </span>
                   <span className="px-4 py-2 bg-blue-600/20 text-blue-400 text-sm font-futura font-bold tracking-wider border border-blue-600/30">
-                    FILM PRODUCTION
+                    VIDEO PRODUCTION
                   </span>
                   <span className="px-4 py-2 bg-gray-600/20 text-gray-400 text-sm font-futura font-bold tracking-wider border border-gray-600/30">
-                    CONSULTING
+                    VIDEO EDITING
                   </span>
                 </div>
               </CardContent>
@@ -302,7 +302,7 @@ export default function Contact() {
             <CardContent className="p-8">
               <div className="flex items-center justify-center space-x-4 mb-4">
                 <Clock className="w-6 h-6 text-blue-400" />
-                <h3 className="text-xl font-futura font-bold text-white tracking-wider">RESPONSE TIME</h3>
+                <h3 className="text-xl font-futura font-bold text-white tracking-wider">Made by YUGANK MAHALE </h3>
               </div>
               <p className="text-gray-400 font-marigold">
                 I typically respond to messages within 24 hours. For urgent projects, feel free to call directly.

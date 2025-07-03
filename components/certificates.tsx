@@ -9,65 +9,76 @@ import { Badge } from "@/components/ui/badge"
 export default function Certificates() {
   const certificates = [
     {
-      title: "Microsoft Azure Fundamentals",
-      issuer: "Microsoft",
-      date: "2024",
-      credentialId: "AZ-900-2024-YM",
+      title: "Azure - DevOps Getting Started",
+      issuer: "SkillShare",
+      date: "2025",
+      credentialId: "3fcc0e77-2209-4186-8fed-2585861baf91",
       description: "Comprehensive understanding of cloud services and Microsoft Azure platform fundamentals.",
       skills: ["Cloud Computing", "Azure Services", "Virtual Machines", "Storage Solutions"],
       verified: true,
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/images/devops.png",
     },
     {
-      title: "Full Stack Web Development",
-      issuer: "Tech Institute",
-      date: "2024",
-      credentialId: "FSWD-2024-001",
-      description: "Complete full-stack development certification covering frontend and backend technologies.",
-      skills: ["React", "Node.js", "MongoDB", "Express.js", "JavaScript"],
-      verified: true,
-      image: "/placeholder.svg?height=200&width=300",
-    },
-    {
-      title: "Python Programming Specialist",
-      issuer: "Python Institute",
-      date: "2023",
-      credentialId: "PY-SPEC-2023-YM",
-      description: "Advanced Python programming certification with focus on data structures and algorithms.",
-      skills: ["Python", "Data Structures", "Algorithms", "OOP", "Libraries"],
-      verified: true,
-      image: "/placeholder.svg?height=200&width=300",
-    },
-    {
-      title: "Mood Indigo Winner",
-      issuer: "IIT Bombay",
-      date: "2023",
-      credentialId: "MI-2023-WINNER",
+      title: "Deloitte Australia - Technology job simulation",
+      issuer: "Forage",
+      date: "2025",
+      credentialId: "kPCiBT7RHdgxogba9",
       description:
-        "Winner at Mood Indigo, Asia's largest college cultural festival, for innovative project presentation.",
-      skills: ["Innovation", "Presentation", "Project Management", "Leadership"],
+        "Problem Solving using Python programming and Data analysis , Professional writing for pitching the project.",
+      skills: ["Python", "Replit Ai", "Writing", "Data analysis", "Professional Communication"],
       verified: true,
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/images/deloitte.png",
     },
     {
-      title: "Mechanical Design Certification",
-      issuer: "Engineering Council",
-      date: "2023",
-      credentialId: "MDC-2023-YM",
-      description: "Professional certification in mechanical design principles and CAD software proficiency.",
-      skills: ["SolidWorks", "AutoCAD", "Mechanical Design", "3D Modeling"],
+      title: "Prakalp 3.0",
+      issuer: "IEEE CRCE",
+      date: "2025",
+      credentialId: "",
+      description: "Hardware Project - Wind Powered Mobile Charging Station",
+      skills: ["Electronics", "3D printing", "Chip management", "Microprocessors", "Circuit Design"],
       verified: true,
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/images/prakalp.png",
     },
     {
-      title: "Video Production & Editing",
-      issuer: "Film Academy",
-      date: "2023",
-      credentialId: "VPE-2023-001",
-      description: "Professional certification in video production, editing techniques, and post-production workflows.",
-      skills: ["Adobe Premiere", "After Effects", "Color Grading", "Audio Editing"],
+      title: "Mood Indigo Quickcut-51",
+      issuer: "IIT Bombay",
+      date: "2025",
+      credentialId: "",
+      description:
+        "Winner at Mood Indigo Quickcut-51, Asia's largest college cultural festival, for innovative project presentation.",
+      skills: ["Presentation", "Project Management", "Leadership", "Film Making", "Direction", "video editing"],
       verified: true,
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/images/moodindigo.jpeg",
+    },
+    {
+      title: "Film Society - CRCE",
+      issuer: "Filmmaking Council",
+      date: "2025",
+      credentialId: "",
+      description:
+        "Professional certification in Video-making and Direction Courtesy and Work experience for the Students' Council.",
+      skills: [
+        "Adobe Premiere Pro",
+        "Adobe After Effects",
+        "Camera Operation",
+        "Color Grading",
+        "Scriptwriting",
+        "Direction",
+        "Video Editing",
+        "Film Production",
+      ],
+      verified: true,
+      image: "/images/filmsco.jpeg",
+    },
+    {
+      title: "CINE-CRCE",
+      issuer: "Fr. Conceicao Rodrigues College of Engineering",
+      date: "2025",
+      credentialId: "",
+      description: "Winner at CINE-CRCE, an inter-college short film competition, for innovative project presentation.",
+      skills: ["Video Editing", "Direction", "Scriptwriting", "Cinematography", "Sound Design"],
+      verified: true,
+      image: "/images/cine.jpeg",
     },
   ]
 
@@ -140,23 +151,7 @@ export default function Certificates() {
                       </div>
                     </div>
 
-                    <div className="pt-4 border-t border-gray-800">
-                      <div className="flex justify-between items-center mb-4">
-                        <span className="text-xs text-gray-500 font-marigold">CREDENTIAL ID:</span>
-                        <span className="text-xs text-blue-400 font-mono">{cert.credentialId}</span>
-                      </div>
-
-                      <div className="flex space-x-3">
-                        <Button size="sm" variant="outline" className="flex-1 text-xs bg-transparent font-marigold">
-                          <ExternalLink className="w-3 h-3 mr-1" />
-                          VERIFY
-                        </Button>
-                        <Button size="sm" variant="outline" className="flex-1 text-xs bg-transparent font-marigold">
-                          <Download className="w-3 h-3 mr-1" />
-                          DOWNLOAD
-                        </Button>
-                      </div>
-                    </div>
+                   
                   </div>
                 </CardContent>
               </Card>
@@ -177,12 +172,7 @@ export default function Certificates() {
               I believe in continuous learning and professional development. These certifications represent my
               commitment to staying current with industry trends and best practices.
             </p>
-            <Button
-              size="lg"
-              className="bg-blue-600 hover:bg-blue-700 px-12 py-4 text-lg font-futura font-bold tracking-wider"
-            >
-              VIEW ALL CREDENTIALS
-            </Button>
+            
           </div>
         </motion.div>
       </div>

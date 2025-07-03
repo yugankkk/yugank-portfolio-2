@@ -7,52 +7,58 @@ import { Button } from "@/components/ui/button"
 export default function Projects() {
   const shortFilms = [
     {
-      title: "ECHOES OF TOMORROW",
-      description: "A sci-fi short film exploring the relationship between technology and humanity.",
-      duration: "12 MIN",
-      year: "2024",
-      category: "SCI-FI DRAMA",
-      awards: ["BEST SHORT FILM", "AUDIENCE CHOICE AWARD"],
+      title: "RUAB",
+      description: "A shortfilm for mood indigo on the theme -heritage and it is a horror/psychological shortfilm .",
+      image: "/images/ruab.jpeg",
+      duration: "9:55 MIN",
+      year: "2025",
+      category: "psychological horror",
+      awards: ["1st prize at Mood Indigo Quickcut-51"],
+      youtube: "https://youtu.be/H2uMnrzWC0g?si=veDmzCz_RpAqNb3C",
     },
     {
-      title: "THE LAST ENGINEER",
-      description: "A documentary-style short film about the last mechanical engineer in an automated world.",
-      duration: "8 MIN",
-      year: "2024",
-      category: "DOCUMENTARY",
-      awards: ["TECHNICAL EXCELLENCE AWARD"],
+      title: "Dvaita",
+      description: "A horror , shortfilm on the theme of parallel universes and the concept of duality.",
+      image: "/images/dvaita.jpeg",
+      duration: "7:01 MIN",
+      year: "2025",
+      category: "Horror",
+      awards: ["1st Prize at CINE-CRCE"],
+      youtube: "https://youtu.be/cGObbzRo5fo?si=5yBWPnAj9xCyH6Sl",
     },
     {
-      title: "GEARS OF TIME",
-      description: "An experimental film combining mechanical engineering concepts with abstract storytelling.",
-      duration: "15 MIN",
-      year: "2023",
-      category: "EXPERIMENTAL",
-      awards: ["INNOVATION IN FILMMAKING"],
+      title: "Aakriti",
+      description: "An experimental film combining mental and schizophrenic horror.",
+      image: "/images/aakriti.jpeg",
+      duration: "4:34 MIN",
+      year: "2024",
+      category: "EXPERIMENTAL , Horror",
+      awards: [""],
+      youtube: "https://youtu.be/w27WhR6XpOM?si=dIZlAc2wQ9EQgkWa",
     },
   ]
 
   const engineeringProjects = [
     {
-      title: "AUTOMATED SOLAR TRACKING SYSTEM",
-      description: "Designed and built an automated solar panel tracking system to maximize energy efficiency.",
-      tech: ["ARDUINO", "SERVO MOTORS", "SOLAR PANELS", "C++"],
+      title: "Wind Powered Mobile Charging Station",
+      description: "Designed and built an automated wind powered charger for mobile phones.",
+      tech: ["type C modules", "Dynamo MOTORS", "NX CAD", "3D PRINTING", "CIRCUIT DESIGN"],
       status: "COMPLETED",
-      year: "2024",
+      year: "2025",
     },
     {
-      title: "MECHANICAL STRESS ANALYSIS TOOL",
-      description: "Developed a Python-based tool for analyzing mechanical stress in various materials.",
-      tech: ["PYTHON", "NUMPY", "MATPLOTLIB", "SCIPY"],
-      status: "IN PROGRESS",
-      year: "2024",
-    },
-    {
-      title: "SMART IRRIGATION SYSTEM",
-      description: "IoT-based irrigation system with moisture sensors and automated water distribution.",
-      tech: ["IOT", "SENSORS", "MICROCONTROLLERS", "MOBILE APP"],
+      title: "Maglev Train Model",
+      description: "Developed a miniature Maglev train for a physics project for magnetism.",
+      tech: ["magnetism", "maglev", "cardboard"],
       status: "COMPLETED",
       year: "2023",
+    },
+    {
+      title: "Student Study Manager Fullstack Code Project with DevOPS",
+      description: "Full-stack web application with mobile app integration for student management.",
+      tech: ["Node", "React", "Fullstack", "MOBILE APP"],
+      status: "COMPLETED",
+      year: "2025",
     },
   ]
 
@@ -98,9 +104,17 @@ export default function Projects() {
                 viewport={{ once: true }}
                 whileHover={{ scale: 1.02, y: -5 }}
               >
-                <div className="w-full h-48 bg-gray-800/50 flex items-center justify-center mb-6">
-                  <Play className="w-16 h-16 text-blue-400" />
-                </div>
+                <div className="relative w-full h-48 mb-6 rounded-md overflow-hidden">
+  <img
+    src={film.image}
+    alt={film.title}
+    className="w-full h-full object-cover"
+  />
+  <div className="absolute inset-0 flex items-center justify-center bg-black/40 hover:bg-black/60 transition duration-300">
+    <Play className="w-12 h-12 text-blue-400" />
+  </div>
+</div>
+
 
                 <div className="space-y-4">
                   <div className="flex justify-between items-center">
@@ -177,19 +191,7 @@ export default function Projects() {
                       ))}
                     </div>
                   </div>
-                  <div className="flex justify-between items-center pt-4">
-                    <span className="text-lg text-gray-500 font-marigold">{project.year}</span>
-                    <div className="flex space-x-3">
-                      <Button size="sm" variant="outline" className="text-sm bg-transparent font-marigold">
-                        <Github className="w-4 h-4 mr-2" />
-                        CODE
-                      </Button>
-                      <Button size="sm" variant="outline" className="text-sm bg-transparent font-marigold">
-                        <ExternalLink className="w-4 h-4 mr-2" />
-                        DEMO
-                      </Button>
-                    </div>
-                  </div>
+                  
                 </div>
               </motion.div>
             ))}
@@ -203,12 +205,7 @@ export default function Projects() {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <Button
-            size="lg"
-            className="bg-blue-600 hover:bg-blue-700 px-12 py-4 text-lg font-futura font-bold tracking-wider transition-all duration-300 hover:scale-105"
-          >
-            VIEW ALL PROJECTS
-          </Button>
+          
         </motion.div>
       </div>
     </section>

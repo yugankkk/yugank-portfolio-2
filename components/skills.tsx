@@ -7,30 +7,30 @@ export default function Skills() {
     {
       title: "ENGINEERING",
       skills: ["MECHANICAL DESIGN", "CAD/CAM", "SOLIDWORKS", "AUTOCAD", "THERMODYNAMICS", "MATERIALS SCIENCE"],
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/images/engineering.jpg?height=200&width=300",
     },
     {
       title: "FILMMAKING",
       skills: ["VIDEO EDITING", "SHORT FILMS", "CINEMATOGRAPHY", "POST-PRODUCTION", "STORYTELLING", "ADOBE PREMIERE"],
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/images/film.jpg?height=200&width=300",
     },
     {
       title: "PROGRAMMING",
       skills: ["PYTHON", "FULL STACK DEVELOPMENT", "JAVASCRIPT", "REACT", "NODE.JS", "DATABASE MANAGEMENT"],
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/images/programming.jpeg?height=200&width=300",
     },
     {
       title: "CERTIFICATIONS",
       skills: ["MICROSOFT AZURE", "CLOUD COMPUTING", "DEVOPS", "SYSTEM ARCHITECTURE", "TECHNICAL DOCUMENTATION"],
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/images/certificatios.jpg?height=200&width=300",
     },
   ]
 
-  const achievements = [
-    { name: "AZURE CERTIFICATION", level: "ADVANCED", image: "/placeholder.svg?height=100&width=100" },
-    { name: "FULL STACK DEVELOPMENT", level: "PROFICIENT", image: "/placeholder.svg?height=100&width=100" },
-    { name: "PYTHON PROGRAMMING", level: "EXPERT", image: "/placeholder.svg?height=100&width=100" },
-    { name: "MOOD INDIGO WINNER", level: "ACHIEVEMENT", image: "/placeholder.svg?height=100&width=100" },
+   const achievements = [
+    { name: "Deloitte Certification", level: "Intermediate", image: "/images/Deloitte-Logo.wine.jpeg" },
+    { name: "FULL STACK DEVELOPMENT", level: "PROFICIENT", image: "/images/Java_(programming_language)-Logo.wine.svg" },
+    { name: "PYTHON PROGRAMMING", level: "EXPERT", image: "/images/Python_(programming_language)-Logo.wine.svg?height=100&width=100" },
+    { name: "MOOD INDIGO WINNER", level: "ACHIEVEMENT", image: "/images/IIT Bombay Icon Logo.svg" },
   ]
 
   return (
