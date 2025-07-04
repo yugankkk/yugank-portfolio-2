@@ -104,16 +104,22 @@ export default function Projects() {
                 viewport={{ once: true }}
                 whileHover={{ scale: 1.02, y: -5 }}
               >
-                <div className="relative w-full h-48 mb-6 rounded-md overflow-hidden">
+                <a
+  href={film.youtube}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="block relative w-full h-48 mb-6 rounded-md overflow-hidden group"
+>
   <img
     src={film.image}
     alt={film.title}
-    className="w-full h-full object-cover"
+    className="w-full h-full object-cover transition duration-300 group-hover:scale-105"
   />
-  <div className="absolute inset-0 flex items-center justify-center bg-black/40 hover:bg-black/60 transition duration-300">
+  <div className="absolute inset-0 flex items-center justify-center bg-black/40 group-hover:bg-black/60 transition duration-300">
     <Play className="w-12 h-12 text-blue-400" />
   </div>
-</div>
+</a>
+
 
 
                 <div className="space-y-4">

@@ -12,38 +12,7 @@ import { Textarea } from "@/components/ui/textarea"
 import { useToast } from "@/hooks/use-toast"
 
 export default function Contact() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
-  })
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const { toast } = useToast()
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true)
-
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 2000))
-
-    toast({
-      title: "Message Sent!",
-      description: "Thank you for reaching out. I'll get back to you soon!",
-    })
-
-    setFormData({ name: "", email: "", subject: "", message: "" })
-    setIsSubmitting(false)
-  }
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData((prev) => ({
-      ...prev,
-      [e.target.name]: e.target.value,
-    }))
-  }
-
+ 
   const contactInfo = [
     {
       icon: Mail,
@@ -92,119 +61,46 @@ export default function Contact() {
 
         <div className="grid lg:grid-cols-2 gap-16 items-start">
           {/* Contact Form */}
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <Card className="bg-gray-900/50 border-gray-700 apple-blur">
-              <CardContent className="p-10">
-                <div className="mb-10">
-                  <h3 className="text-3xl font-futura font-bold mb-6 text-white tracking-wider">SEND MESSAGE</h3>
-                  <p className="text-gray-400 font-marigold text-lg leading-relaxed">
-                    Have a project in mind? I'd love to hear about it. Send me a message and let's discuss how we can
-                    work together. - yugank 
-                  </p>
-                </div>
+          {/* Contact Form & Personal Letter */}
+<motion.div
+  initial={{ opacity: 0, x: -50 }}
+  whileInView={{ opacity: 1, x: 0 }}
+  transition={{ duration: 0.8 }}
+  viewport={{ once: true }}
+  className="space-y-8 flex flex-col justify-between h-full"
+>
+  {/* Heartfelt Letter */}
+  <Card className="bg-gray-900/50 border-gray-700 apple-blur w-full">
+    <CardContent className="p-10">
+      <h3 className="text-3xl font-futura font-bold mb-6 text-white tracking-wider">Thank you !</h3>
+      <p className="text-gray-400 font-marigold text-lg leading-relaxed">
+        Hello There 🦋<br /><br />
+        I’m Yugank , a passionate learner, creator, and engineer at heart. My journey so far has been filled with curiosity, collaboration, and the constant desire to push creative and technical boundaries.
+        <br /><br />
+        Whether it’s creating a cinematic video, solving engineering problems, or building something impactful, I bring my full heart into it. I believe the best work comes when you don't force it but let your heart decide, and I’m always looking for opportunities where I can grow and contribute meaningfully.
+        <br /><br />
+        If you’ve come this far on my portfolio, thank you it really means a lot. I hope we can connect, create, and build something great together.
+        <br /><br />
+        With Love and Ambition,<br />
+        <span className="text-blue-400 font-futura font-bold text-xl">Yugank Manesh Mahale</span>
+      </p>
+    </CardContent>
+  </Card>
 
-                <form onSubmit={handleSubmit} className="space-y-8">
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div>
-                      <label
-                        htmlFor="name"
-                        className="block text-sm font-futura font-bold text-gray-300 mb-3 tracking-wider"
-                      >
-                        NAME
-                      </label>
-                      <Input
-                        id="name"
-                        name="name"
-                        value={formData.name}
-                        onChange={handleChange}
-                        required
-                        className="bg-gray-800 border-gray-600 text-white focus:border-blue-400 h-12 font-marigold"
-                        placeholder="Your name"
-                      />
-                    </div>
-                    <div>
-                      <label
-                        htmlFor="email"
-                        className="block text-sm font-futura font-bold text-gray-300 mb-3 tracking-wider"
-                      >
-                        EMAIL
-                      </label>
-                      <Input
-                        id="email"
-                        name="email"
-                        type="email"
-                        value={formData.email}
-                        onChange={handleChange}
-                        required
-                        className="bg-gray-800 border-gray-600 text-white focus:border-blue-400 h-12 font-marigold"
-                        placeholder="your.email@example.com"
-                      />
-                    </div>
-                  </div>
+  {/* DROP ME A TEXT */}
+  <Card className="bg-gray-900/50 border-gray-700 apple-blur w-full">
+    <CardContent className="p-10">
+      <div className="mb-10">
+        <h3 className="text-3xl font-futura font-bold mb-6 text-white tracking-wider">DROP ME A TEXT</h3>
+        <p className="text-gray-400 font-marigold text-lg leading-relaxed">
+          Have a project in mind? I'd love to hear about it. Send me a message and let's discuss how we can
+          work together !!
+        </p>
+      </div>
+    </CardContent>
+  </Card>
+</motion.div>
 
-                  <div>
-                    <label
-                      htmlFor="subject"
-                      className="block text-sm font-futura font-bold text-gray-300 mb-3 tracking-wider"
-                    >
-                      SUBJECT
-                    </label>
-                    <Input
-                      id="subject"
-                      name="subject"
-                      value={formData.subject}
-                      onChange={handleChange}
-                      required
-                      className="bg-gray-800 border-gray-600 text-white focus:border-blue-400 h-12 font-marigold"
-                      placeholder="What's this about?"
-                    />
-                  </div>
-
-                  <div>
-                    <label
-                      htmlFor="message"
-                      className="block text-sm font-futura font-bold text-gray-300 mb-3 tracking-wider"
-                    >
-                      MESSAGE
-                    </label>
-                    <Textarea
-                      id="message"
-                      name="message"
-                      value={formData.message}
-                      onChange={handleChange}
-                      required
-                      rows={6}
-                      className="bg-gray-800 border-gray-600 text-white focus:border-blue-400 resize-none font-marigold"
-                      placeholder="Tell me about your project or idea..."
-                    />
-                  </div>
-
-                  <Button
-                    type="submit"
-                    disabled={isSubmitting}
-                    className="w-full bg-blue-600 hover:bg-blue-700 text-white py-4 font-futura font-bold tracking-wider text-lg"
-                  >
-                    {isSubmitting ? (
-                      <div className="flex items-center">
-                        <div className="animate-spin h-5 w-5 border-b-2 border-white mr-3" />
-                        SENDING...
-                      </div>
-                    ) : (
-                      <div className="flex items-center">
-                        <Send className="w-5 h-5 mr-3" />
-                        SEND MESSAGE
-                      </div>
-                    )}
-                  </Button>
-                </form>
-              </CardContent>
-            </Card>
-          </motion.div>
 
           {/* Contact Info & Interactive Elements */}
           <motion.div
