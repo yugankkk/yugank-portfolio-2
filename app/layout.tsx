@@ -1,7 +1,9 @@
 import type React from "react"
 import type { Metadata } from "next"
-import "./globals.css"
+import './globals.css';
+
 import { ToastProvider } from "@/components/ui/toast"
+
 
 export const metadata: Metadata = {
   title: "Yugank Mahale - Mechanical Engineer & Filmmaker",
