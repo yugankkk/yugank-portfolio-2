@@ -86,9 +86,9 @@ export default function Hero() {
             transition={{ delay: 1.2, duration: 0.8 }}
           >
             {[
-              { icon: Github, href: "#", label: "GitHub" },
-              { icon: Linkedin, href: "#", label: "LinkedIn" },
-              { icon: Mail, href: "#", label: "Email" },
+              { icon: Github, href: "https://github.com/yugankkk", label: "GitHub" },
+              { icon: Linkedin, href: "https://www.linkedin.com/in/yugank-mahale/", label: "LinkedIn" },
+              { icon: Mail, href: "yugank2mahale@gmail.com", label: "Email" },
             ].map(({ icon: Icon, href, label }) => (
               <motion.a
                 key={label}
