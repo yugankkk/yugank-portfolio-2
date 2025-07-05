@@ -88,7 +88,11 @@ export default function Hero() {
             {[
               { icon: Github, href: "https://github.com/yugankkk", label: "GitHub" },
               { icon: Linkedin, href: "https://www.linkedin.com/in/yugank-mahale/", label: "LinkedIn" },
-              { icon: Mail, href: "yugank2mahale@gmail.com", label: "Email" },
+              { 
+  icon: Mail, 
+  href: "mailto:yugank2mahale@gmail.com?subject=Hello&body=I%20saw%20your%20portfolio...", 
+  label: "Email" 
+}
             ].map(({ icon: Icon, href, label }) => (
               <motion.a
                 key={label}
